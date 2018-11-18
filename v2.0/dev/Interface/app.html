@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Involt</title>
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+  <script src="core/jquery/jquery-2.1.0.min.js"></script>
+  <script src="core/jquery/jquery.nouislider.min.js"></script>
+  <script src="core/jquery/jquery.knob.js"></script>
+  <script src="core/jquery/insQ.min.js"></script>
+  <script src="settings.js"></script>
+  <script src="core/bridge.js"></script>
+  <script src="core/framework.js"></script>
+  <script src="core/firebase.js"></script>
+  <script src="src/libs/three.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <script src="./core/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/framework.css" />
+  <link rel="stylesheet" type="text/css" href="css/three.css" />
+</head>
+
+<body style=" overflow-x: hidden; overflow-y: hidden;">
+  <div style="margin:0; padding:0; margin-right: 0; height: 100%;" class="container-fluid">
+    <nav class="row navbar navbar-expand-lg navbar-dark bg-dark rounded-bottom">
+      <a class="navbar-brand mr-2" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row content">
+      <div id="canvas-container" class="col-10"></div>
+      <div style="background-color: rgb(72,79,84);" class="col-2">
+        asidiand
+        <input />
+      </div>
+    </div>
+  </div>
+
+  <script src="src/libs/OrbitControls.js"></script>
+  <script src="src/libs/GLTFLoader.js"></script>
+  <script src="src/3Renderer.js"></script>
+  <script src="src/windowEvents.js"></script>
+</body>
+
+</html>
