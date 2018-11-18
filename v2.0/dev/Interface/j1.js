@@ -4,11 +4,11 @@ var valor;
 var a = 0;
 function Init(){// Initialize Firebase
     config = {
-		apiKey: "AIzaSyC2Lhzr1gryBRNSe5Hjzz_2kHHQaFGWxGQ",
-		databaseURL: "https://hack-6d4d3.firebaseio.com",
-		projectId: "hack-6d4d3",
-		storageBucket: "",
-		messagingSenderId: "142327007764"
+		apiKey: "------",
+		databaseURL: "----",
+		projectId: "---",
+		storageBucket: "----",
+		messagingSenderId: "---"
 		};
 		firebase.initializeApp(config);
   // Get a reference to the database service
