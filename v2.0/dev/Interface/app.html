@@ -33,7 +33,7 @@
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+          <li class="nav-item"><button onclick="ligar()">Ligar</button></li>
           <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#">Disabled</a>
@@ -44,17 +44,21 @@
 
     <div class="row content">
       <div id="canvas-container" class="col-10"></div>
-      <div style="background-color: rgb(72,79,84);" class="col-2">
-        asidiand
-        <input />
+      <div style="background-color: rgb(72,79,84)" class="col-2">
+        <div class="ard show A0"></div>
+
+        <div class="ard toggle P7"></div>
       </div>
     </div>
   </div>
 
   <script src="src/libs/OrbitControls.js"></script>
-  <script src="src/libs/GLTFLoader.js"></script>
+  <script src="src/libs/MTLLoader.js"></script>
+  <script src="src/libs/OBJLoader.js"></script>
+  <script src="src/libs/SpriteText.js"></script>
+  <!--script src="src/HandleData.js"></script--->
   <script src="src/3Renderer.js"></script>
-  <script src="src/windowEvents.js"></script>
+  <script src="src/Labels.js"></script>
 </body>
 
 </html>
