@@ -42,12 +42,12 @@ ObjectsData = createData();
 let Arm = BuildArm();
 
 document.addEventListener("mousemove", onDocumentMouseMove, false);
-console.log(labels[0]);
 animate();
 
 function animate() {
   requestAnimationFrame(animate);
   updateData(ObjectsData);
+  console.log(involt.pin.A[0]);
   controls.update();
   hoverObjects();
 
@@ -73,13 +73,13 @@ function BuildArm() {
   var mtlLoader = new THREE.MTLLoader();
   mtlLoader.setPath("src/models/");
   var url = "motor.mtl";
-  mtlLoader.load(url, function(materials) {
+  mtlLoader.load(url, function (materials) {
     materials.preload();
 
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
     objLoader.setPath("src/models/");
-    objLoader.load("motor.obj", function(object) {
+    objLoader.load("motor.obj", function (object) {
       object.children[0].name = ObjectsData.base.motor1.name;
       motor1.copy(object);
       object.children[0].name = ObjectsData.base.motor1_1.name;
@@ -140,13 +140,13 @@ function BuildArm() {
   var mtlLoader = new THREE.MTLLoader();
   mtlLoader.setPath("src/models/");
   var url = "gear8.mtl";
-  mtlLoader.load(url, function(materials) {
+  mtlLoader.load(url, function (materials) {
     materials.preload();
 
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
     objLoader.setPath("src/models/");
-    objLoader.load("gear8.obj", function(object) {
+    objLoader.load("gear8.obj", function (object) {
       gear8.copy(object);
       gear8.position.set(0.3, 1.4, 0.25);
       gear8.name = ObjectsData.gearSet1.gear8_1.name;
@@ -163,13 +163,13 @@ function BuildArm() {
   var mtlLoader = new THREE.MTLLoader();
   mtlLoader.setPath("src/models/");
   var url = "gear8_16.mtl";
-  mtlLoader.load(url, function(materials) {
+  mtlLoader.load(url, function (materials) {
     materials.preload();
 
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
     objLoader.setPath("src/models/");
-    objLoader.load("gear8_16.obj", function(object) {
+    objLoader.load("gear8_16.obj", function (object) {
       gear8_16.copy(object);
       gear8_16.position.set(0.15, 1.4, 0.55);
       gear8_16.name = ObjectsData.gearSet1.gear8_16.name;
@@ -186,13 +186,13 @@ function BuildArm() {
   var mtlLoader = new THREE.MTLLoader();
   mtlLoader.setPath("src/models/");
   var url = "gear24.mtl";
-  mtlLoader.load(url, function(materials) {
+  mtlLoader.load(url, function (materials) {
     materials.preload();
 
     var objLoader = new THREE.OBJLoader();
     objLoader.setMaterials(materials);
     objLoader.setPath("src/models/");
-    objLoader.load("gear24.obj", function(object) {
+    objLoader.load("gear24.obj", function (object) {
       gear24.copy(object);
       gear24.position.set(0, 1.4, 0.85);
       gear24.name = ObjectsData.gearSet1.gear24.name;
@@ -286,12 +286,6 @@ function hoverObjects() {
         labels[i].label.visible = true;
       }
     }
-
-    // if (intersects[0].object.name == "motor1") {
-    //   labels[0].visible = false;
-    // }
-    // if (intersects[0].object.name == "motor1_1") {
-    // }
   } else {
     for (let i = 0; i < labels.length; i++) {
       labels[i].label.visible = false;
@@ -339,5 +333,6 @@ function createData() {
 }
 
 function updateData(Data) {
+
   Data.base.motor1.voltage = involt.pin.A[0];
 }

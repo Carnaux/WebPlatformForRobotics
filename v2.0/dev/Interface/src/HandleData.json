@@ -1,0 +1,37 @@
+{
+    "ObjectsData": {
+        "base": {
+            "motor1": {
+                "name": "motor1",
+                "RPM": 0,
+                "voltage": 0
+            },
+            "motor1_1": {
+                "name": "motor1_1",
+                "RPM": 0,
+                "voltage": 0
+            }
+        },
+        "gearSet1": {
+            "gear8_1": {
+                "name": "gear8_1",
+                "RPM": 0
+            },
+            "gear8_16": {
+                "name": "gear8_16",
+                "RPM": 0
+            },
+            "gear24": {
+                "name": "gear24",
+                "RPM": 0
+            }
+        },
+        "elbow": {
+            "motor2": {
+                "name": "motor2",
+                "RPM": 0,
+                "voltage": 0
+            }
+        }
+    }
+}
